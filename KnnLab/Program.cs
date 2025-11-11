@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-// https://medium.com/@kdcodechronicles/understanding-k-nearest-neighbors-algorithm-knn-c-example-d4fce614ea46
 public class KnnClassifier
 {
     private readonly int k;
