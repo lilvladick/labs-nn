@@ -12,20 +12,27 @@ class OptimizationAlgorithms
     {
         return 3 * Math.Pow(x, 2) - 1;
     }
+    // вторая производная
+    public static double D2Function(double x) => 2.0;
     //дихотомия
     public static double Dichotomy(double a, double b, double e = 1e-8)
     {
-        double c = (a + b) / 2;
+        if (DFunction(a) * DFunction(b) > 0)
+                throw new ArgumentException("Производная не меняет знак на отрезке — нет гарантии минимума.");
+
+
+        double c = 0;
 
         while ((b - a) >= 2 * e)
         {
-            if (Function(a) * Function(c) < 0) b = c;
-            else a = c;
-
             c = (a + b) / 2;
+            if (DFunction(a) * DFunction(c) < 0)
+                b = c;
+            else
+                a = c;
         }
 
-        return c;
+        return (a + b) / 2;
     }
 
     // золотое
@@ -107,12 +114,12 @@ class OptimizationAlgorithms
         double x = x0;
         for (int iter = 0; iter < maxIter; iter++)
         {
-            double f = Function(x);
-            double df = DFunction(x);
+            double f1 = DFunction(x);
+            double f2 = D2Function(x);
 
-            if (Math.Abs(df) < 1e-12) break;
+            if (Math.Abs(f2) < 1e-12) break;
 
-            double next = x - f / df;
+            double next = x - f1 / f2;
 
             if (Math.Abs(Function(next)) < e || Math.Abs(next - x) < e) return next;
 
@@ -133,7 +140,7 @@ class Program
         var b = Convert.ToDouble(Console.ReadLine());
 
         var dichotomyRes = OptimizationAlgorithms.Dichotomy(a, b);
-        Console.WriteLine($"\nКорень уравнения на отрезке [{a}, {b}] равен {dichotomyRes:F8}");
+        Console.WriteLine($"\n(Dich) Минимум функции на отрезке [{a}, {b}] x = {dichotomyRes:F8}");
         Console.WriteLine($"f(x) = {OptimizationAlgorithms.Function(dichotomyRes):F8}");
         Console.WriteLine();
 
@@ -153,7 +160,7 @@ class Program
         double x0 = Convert.ToDouble(Console.ReadLine());
 
         double newtonRes = OptimizationAlgorithms.Newton(x0);
-        Console.WriteLine($"\n(Newton) Корень x = {newtonRes:F8}");
+        Console.WriteLine($"\n(Newton) Минимум функции на отрезке [{a}, {b}] x = {newtonRes:F8}");
         Console.WriteLine($"f(x) = {OptimizationAlgorithms.Function(newtonRes):F8}");
     }
 }
