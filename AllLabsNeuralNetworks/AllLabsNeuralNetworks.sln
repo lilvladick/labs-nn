@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabsAlgorithm", "LabsAlgorithm\LabsAlgorithm.csproj", "{1FD7A28D-E20B-4872-AFD0-BD21EB574685}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllLabsNeuralNetworks", "AllLabsNeuralNetworks\AllLabsNeuralNetworks.csproj", "{38BB3C7F-67F4-41DB-BD11-F0CF088D3646}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FD7A28D-E20B-4872-AFD0-BD21EB574685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FD7A28D-E20B-4872-AFD0-BD21EB574685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FD7A28D-E20B-4872-AFD0-BD21EB574685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FD7A28D-E20B-4872-AFD0-BD21EB574685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38BB3C7F-67F4-41DB-BD11-F0CF088D3646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38BB3C7F-67F4-41DB-BD11-F0CF088D3646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38BB3C7F-67F4-41DB-BD11-F0CF088D3646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38BB3C7F-67F4-41DB-BD11-F0CF088D3646}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

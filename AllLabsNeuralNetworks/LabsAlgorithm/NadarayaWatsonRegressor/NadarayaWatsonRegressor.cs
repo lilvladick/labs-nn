@@ -1,4 +1,4 @@
-namespace LabsAlgorithms.NadarayaWatsonRegressor;
+namespace LabsAlgorithm.NadarayaWatsonRegressor;
 
 public class NadarayaWatsonRegressor
 {

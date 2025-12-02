@@ -1,4 +1,4 @@
-namespace LabsAlgorithms.SVMClassifier;
+namespace LabsAlgorithm.SVMClassifier;
 
 public class LinearSvmClassifier(int featureCount, double lambda = 0.01, double learningRate = 0.1)
 {

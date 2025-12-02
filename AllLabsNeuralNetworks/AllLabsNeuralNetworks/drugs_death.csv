@@ -4157,37 +4157,37 @@ data_as_of,death_year,death_month,jurisdiction_occurrence,drug_involved,time_per
 01/05/2025,2024,4,Region 6,Xylazine,12 month-ending,04/30/2024,75,
 01/05/2025,2024,5,Region 6,Xylazine,12 month-ending,05/31/2024,80,
 01/05/2025,2024,6,Region 6,Xylazine,12 month-ending,06/30/2024,81,
-01/05/2025,2019,1,Region 7,Xylazine,12 month-ending,01/31/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,2,Region 7,Xylazine,12 month-ending,02/28/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,3,Region 7,Xylazine,12 month-ending,03/31/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,4,Region 7,Xylazine,12 month-ending,04/30/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,5,Region 7,Xylazine,12 month-ending,05/31/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,6,Region 7,Xylazine,12 month-ending,06/30/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,7,Region 7,Xylazine,12 month-ending,07/31/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,8,Region 7,Xylazine,12 month-ending,08/31/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,9,Region 7,Xylazine,12 month-ending,09/30/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,10,Region 7,Xylazine,12 month-ending,10/31/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,11,Region 7,Xylazine,12 month-ending,11/30/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2019,12,Region 7,Xylazine,12 month-ending,12/31/2019,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,1,Region 7,Xylazine,12 month-ending,01/31/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,2,Region 7,Xylazine,12 month-ending,02/29/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,3,Region 7,Xylazine,12 month-ending,03/31/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,4,Region 7,Xylazine,12 month-ending,04/30/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,5,Region 7,Xylazine,12 month-ending,05/31/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,6,Region 7,Xylazine,12 month-ending,06/30/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,7,Region 7,Xylazine,12 month-ending,07/31/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,8,Region 7,Xylazine,12 month-ending,08/31/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,9,Region 7,Xylazine,12 month-ending,09/30/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,10,Region 7,Xylazine,12 month-ending,10/31/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,11,Region 7,Xylazine,12 month-ending,11/30/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2020,12,Region 7,Xylazine,12 month-ending,12/31/2020,,Death counts between 1-9 are suppressed.
-01/05/2025,2021,1,Region 7,Xylazine,12 month-ending,01/31/2021,,Death counts between 1-9 are suppressed.
-01/05/2025,2021,2,Region 7,Xylazine,12 month-ending,02/28/2021,,Death counts between 1-9 are suppressed.
-01/05/2025,2021,3,Region 7,Xylazine,12 month-ending,03/31/2021,,Death counts between 1-9 are suppressed.
-01/05/2025,2021,4,Region 7,Xylazine,12 month-ending,04/30/2021,,Death counts between 1-9 are suppressed.
-01/05/2025,2021,5,Region 7,Xylazine,12 month-ending,05/31/2021,,Death counts between 1-9 are suppressed.
-01/05/2025,2021,6,Region 7,Xylazine,12 month-ending,06/30/2021,,Death counts between 1-9 are suppressed.
-01/05/2025,2021,7,Region 7,Xylazine,12 month-ending,07/31/2021,,Death counts between 1-9 are suppressed.
+01/05/2025,2019,1,Region 7,Xylazine,12 month-ending,01/31/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,2,Region 7,Xylazine,12 month-ending,02/28/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,3,Region 7,Xylazine,12 month-ending,03/31/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,4,Region 7,Xylazine,12 month-ending,04/30/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,5,Region 7,Xylazine,12 month-ending,05/31/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,6,Region 7,Xylazine,12 month-ending,06/30/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,7,Region 7,Xylazine,12 month-ending,07/31/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,8,Region 7,Xylazine,12 month-ending,08/31/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,9,Region 7,Xylazine,12 month-ending,09/30/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,10,Region 7,Xylazine,12 month-ending,10/31/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,11,Region 7,Xylazine,12 month-ending,11/30/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2019,12,Region 7,Xylazine,12 month-ending,12/31/2019,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,1,Region 7,Xylazine,12 month-ending,01/31/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,2,Region 7,Xylazine,12 month-ending,02/29/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,3,Region 7,Xylazine,12 month-ending,03/31/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,4,Region 7,Xylazine,12 month-ending,04/30/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,5,Region 7,Xylazine,12 month-ending,05/31/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,6,Region 7,Xylazine,12 month-ending,06/30/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,7,Region 7,Xylazine,12 month-ending,07/31/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,8,Region 7,Xylazine,12 month-ending,08/31/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,9,Region 7,Xylazine,12 month-ending,09/30/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,10,Region 7,Xylazine,12 month-ending,10/31/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,11,Region 7,Xylazine,12 month-ending,11/30/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2020,12,Region 7,Xylazine,12 month-ending,12/31/2020,5,Death counts between 1-9 are suppressed.
+01/05/2025,2021,1,Region 7,Xylazine,12 month-ending,01/31/2021,5,Death counts between 1-9 are suppressed.
+01/05/2025,2021,2,Region 7,Xylazine,12 month-ending,02/28/2021,5,Death counts between 1-9 are suppressed.
+01/05/2025,2021,3,Region 7,Xylazine,12 month-ending,03/31/2021,5,Death counts between 1-9 are suppressed.
+01/05/2025,2021,4,Region 7,Xylazine,12 month-ending,04/30/2021,5,Death counts between 1-9 are suppressed.
+01/05/2025,2021,5,Region 7,Xylazine,12 month-ending,05/31/2021,5,Death counts between 1-9 are suppressed.
+01/05/2025,2021,6,Region 7,Xylazine,12 month-ending,06/30/2021,5,Death counts between 1-9 are suppressed.
+01/05/2025,2021,7,Region 7,Xylazine,12 month-ending,07/31/2021,5,Death counts between 1-9 are suppressed.
 01/05/2025,2021,8,Region 7,Xylazine,12 month-ending,08/31/2021,13,
 01/05/2025,2021,9,Region 7,Xylazine,12 month-ending,09/30/2021,24,
 01/05/2025,2021,10,Region 7,Xylazine,12 month-ending,10/31/2021,34,
@@ -4374,13 +4374,13 @@ data_as_of,death_year,death_month,jurisdiction_occurrence,drug_involved,time_per
 01/05/2025,2020,5,Region 10,Xylazine,12 month-ending,05/31/2020,12,
 01/05/2025,2020,6,Region 10,Xylazine,12 month-ending,06/30/2020,11,
 01/05/2025,2020,7,Region 10,Xylazine,12 month-ending,07/31/2020,11,
-01/05/2025,2020,8,Region 10,Xylazine,12 month-ending,08/31/2020,,Death counts between 1-9 are suppressed.
+01/05/2025,2020,8,Region 10,Xylazine,12 month-ending,08/31/2020,5,Death counts between 1-9 are suppressed.
 01/05/2025,2020,9,Region 10,Xylazine,12 month-ending,09/30/2020,10,
 01/05/2025,2020,10,Region 10,Xylazine,12 month-ending,10/31/2020,13,
 01/05/2025,2020,11,Region 10,Xylazine,12 month-ending,11/30/2020,11,
 01/05/2025,2020,12,Region 10,Xylazine,12 month-ending,12/31/2020,10,
-01/05/2025,2021,1,Region 10,Xylazine,12 month-ending,01/31/2021,,Death counts between 1-9 are suppressed.
-01/05/2025,2021,2,Region 10,Xylazine,12 month-ending,02/28/2021,,Death counts between 1-9 are suppressed.
+01/05/2025,2021,1,Region 10,Xylazine,12 month-ending,01/31/2021,5,Death counts between 1-9 are suppressed.
+01/05/2025,2021,2,Region 10,Xylazine,12 month-ending,02/28/2021,5,Death counts between 1-9 are suppressed.
 01/05/2025,2021,3,Region 10,Xylazine,12 month-ending,03/31/2021,12,
 01/05/2025,2021,4,Region 10,Xylazine,12 month-ending,04/30/2021,13,
 01/05/2025,2021,5,Region 10,Xylazine,12 month-ending,05/31/2021,15,

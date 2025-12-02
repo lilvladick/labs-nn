@@ -1,4 +1,4 @@
-namespace LabsAlgorithms.StolpAlgorithm;
+namespace LabsAlgorithm.StolpAlgorithm;
 
 public static class Stolp
 {
@@ -29,7 +29,7 @@ public static class Stolp
         do
         {
             changed = false;
-            var knn = new LabsAlgorithms.KnnClassifier.KnnClassifier(k: 1);
+            var knn = new LabsAlgorithm.KnnClassifier.KnnClassifier(k: 1);
             foreach (var (f, l) in reduced)
                 knn.Train(f, l);
 

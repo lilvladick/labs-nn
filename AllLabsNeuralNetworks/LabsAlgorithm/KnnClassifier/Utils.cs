@@ -1,4 +1,4 @@
-namespace LabsAlgorithms.KnnClassifier;
+namespace LabsAlgorithm.KnnClassifier;
 
 public static class Utils
 {

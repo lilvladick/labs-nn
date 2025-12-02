@@ -1,4 +1,9 @@
-﻿namespace Main;
+﻿using LabsAlgorithm.KnnClassifier;
+using LabsAlgorithm.Normalizations;
+using LabsAlgorithm.StolpAlgorithm;
+using Utils = LabsAlgorithm.Normalizations.Utils;
+
+namespace AllLabsNeuralNetworks;
 
 class Program
 {
@@ -62,29 +67,29 @@ class Program
         switch (choice)
         {
             case "1":
-                var (min, max) = LabsAlgorithms.Normalizations.Normalizer.FitMinMax(data);
+                var (min, max) = Normalizer.FitMinMax(data);
                 fitParams = (min, max);
-                return d => LabsAlgorithms.Normalizations.Normalizer.LinearNormalization(d, min, max);
+                return d => Normalizer.LinearNormalization(d, min, max);
 
             case "2":
-                var (mean, std) = LabsAlgorithms.Normalizations.Normalizer.FitZScore(data);
+                var (mean, std) = Normalizer.FitZScore(data);
                 fitParams = (mean, std);
-                return d => LabsAlgorithms.Normalizations.Normalizer.ZScoreNormalization(d, mean, std);
+                return d => Normalizer.ZScoreNormalization(d, mean, std);
 
             case "3":
                 fitParams = null;
-                return LabsAlgorithms.Normalizations.Normalizer.LogNormalization;
+                return Normalizer.LogNormalization;
 
             case "4":
-                var maxAbs = LabsAlgorithms.Normalizations.Normalizer.FitMaxAbs(data);
+                var maxAbs = Normalizer.FitMaxAbs(data);
                 fitParams = maxAbs;
-                return d => LabsAlgorithms.Normalizations.Normalizer.MaxAbsNormalization(d, maxAbs);
+                return d => Normalizer.MaxAbsNormalization(d, maxAbs);
 
             default:
                 Console.WriteLine("Выбран MinMax по умолчанию.");
-                var (mn, mx) = LabsAlgorithms.Normalizations.Normalizer.FitMinMax(data);
+                var (mn, mx) = Normalizer.FitMinMax(data);
                 fitParams = (mn, mx);
-                return d => LabsAlgorithms.Normalizations.Normalizer.LinearNormalization(d, mn, mx);
+                return d => Normalizer.LinearNormalization(d, mn, mx);
         }
     }
     
@@ -106,21 +111,21 @@ class Program
         var trainData = shuffled.Take(trainCount).ToList();
         var testData = shuffled.Skip(trainCount).ToList();
 
-        var targetEncoding = LabsAlgorithms.KnnClassifier.Utils.ComputeTargetEncoding(trainData);
+        var targetEncoding = LabsAlgorithm.KnnClassifier.Utils.ComputeTargetEncoding(trainData);
 
         var featuredTrainData = trainData.Select(t =>
-            (LabsAlgorithms.KnnClassifier.Utils.MakeNewDrugFeatures(
+            (LabsAlgorithm.KnnClassifier.Utils.MakeNewDrugFeatures(
                 (int)t.Features[0], (int)t.Features[1], (int)t.Features[2], targetEncoding), t.Label)
         ).ToList();
 
         var featuredTestData = testData.Select(t =>
-            (LabsAlgorithms.KnnClassifier.Utils.MakeNewDrugFeatures(
+            (LabsAlgorithm.KnnClassifier.Utils.MakeNewDrugFeatures(
                 (int)t.Features[0], (int)t.Features[1], (int)t.Features[2], targetEncoding), t.Label)
         ).ToList();
         
-        var reducedTrainData = LabsAlgorithms.StolpAlgorithm.Stolp.Reduce(featuredTrainData, minMargin: 0.0);
+        var reducedTrainData = Stolp.Reduce(featuredTrainData, minMargin: 0.0);
 
-        var knn = new LabsAlgorithms.KnnClassifier.WeightedKnnClassifier(k: 5);
+        var knn = new WeightedKnnClassifier(k: 5);
         foreach (var (f, label) in reducedTrainData)
             knn.Train(f, label);
 
@@ -146,7 +151,7 @@ class Program
             if (fitParams == null) continue;
             var normalized = NormalizeUserInput(input, fitParams);
 
-            var feat = LabsAlgorithms.KnnClassifier.Utils.MakeNewDrugFeatures(
+            var feat = LabsAlgorithm.KnnClassifier.Utils.MakeNewDrugFeatures(
                 (int)normalized[0], (int)normalized[1], (int)normalized[2], targetEncoding);
 
             var pred = knn.Classify(feat);
@@ -158,14 +163,14 @@ class Program
     {
         return fitParams switch
         {
-            null => LabsAlgorithms.Normalizations.Utils.NormalizeUserInputLog(input),
-            (double[] min, double[] max) => LabsAlgorithms.Normalizations.Utils.NormalizeUserInputMinMax(input, min,
+            null => Utils.NormalizeUserInputLog(input),
+            (double[] min, double[] max) => Utils.NormalizeUserInputMinMax(input, min,
                 max),
             _ => fitParams switch
             {
-                (double[] mean, double[] std) => LabsAlgorithms.Normalizations.Utils.NormalizeUserInputZScore(input,
+                (double[] mean, double[] std) => Utils.NormalizeUserInputZScore(input,
                     mean, std),
-                double[] maxAbs => LabsAlgorithms.Normalizations.Utils.NormalizeUserInputMaxAbs(input, maxAbs),
+                double[] maxAbs => Utils.NormalizeUserInputMaxAbs(input, maxAbs),
                 _ => throw new Exception("Неизвестная нормализация")
             }
         };

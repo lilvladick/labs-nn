@@ -1,8 +1,4 @@
-namespace LabsAlgorithms.Normalizations;
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
+namespace LabsAlgorithm.Normalizations;
 
 public class Normalizer
 {

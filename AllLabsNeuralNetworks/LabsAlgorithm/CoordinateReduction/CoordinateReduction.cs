@@ -1,4 +1,4 @@
-namespace LabsAlgorithms.CoordinateReduction;
+namespace LabsAlgorithm.CoordinateReduction;
 
 public class CoordinateReductionClass
 {

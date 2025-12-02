@@ -1,4 +1,4 @@
-namespace LabsAlgorithms.Gradients;
+namespace LabsAlgorithm.Gradients;
 
 public class ConjugateGradient // он нелинейный
 {

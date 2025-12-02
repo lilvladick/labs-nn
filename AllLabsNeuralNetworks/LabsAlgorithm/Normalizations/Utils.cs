@@ -1,4 +1,4 @@
-namespace LabsAlgorithms.Normalizations;
+namespace LabsAlgorithm.Normalizations;
 
 public class Utils
 {

@@ -1,4 +1,4 @@
-namespace LabsAlgorithms.MinimizationAlgorithms;
+namespace LabsAlgorithm.MinimizationAlgorithms;
 
 public class MinimizationAlgorithms
 {
