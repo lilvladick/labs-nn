@@ -1,4 +1,4 @@
-using System;
+namespace LabsAlgorithms.StolpAlgorithm;
 
 public static class Stolp
 {
@@ -11,17 +11,15 @@ public static class Stolp
         {
             var sameClass = data.Where(d => d.Label == cls).ToList();
 
-            double bestMargin = double.NegativeInfinity;
-            (double[] Features, string Label) best = sameClass.First();
+            var bestMargin = double.NegativeInfinity;
+            var best = sameClass.First();
 
             foreach (var obj in sameClass)
             {
-                double margin = CalculateMargin(obj, data);
-                if (margin > bestMargin)
-                {
-                    bestMargin = margin;
-                    best = obj;
-                }
+                var margin = CalculateMargin(obj, data);
+                if (!(margin > bestMargin)) continue;
+                bestMargin = margin;
+                best = obj;
             }
 
             reduced.Add(best);
@@ -31,23 +29,25 @@ public static class Stolp
         do
         {
             changed = false;
-            var knn = new KnnClassifier(k: 1);
+            var knn = new LabsAlgorithms.KnnClassifier.KnnClassifier(k: 1);
             foreach (var (f, l) in reduced)
                 knn.Train(f, l);
 
-            foreach (var obj in data)
+            var toAdd = new List<(double[] Features, string Label)>();
+
+            var reduced2 = reduced;
+            foreach (var obj in from obj in data let predicted = knn.Classify(obj.Features) where predicted != obj.Label && !reduced2.Contains(obj) && !toAdd.Contains(obj) select obj)
             {
-                string predicted = knn.Classify(obj.Features);
-                if (predicted != obj.Label)
-                {
-                    reduced.Add(obj);
-                    changed = true;
-                }
+                toAdd.Add(obj);
+                changed = true;
             }
+
+            reduced.AddRange(toAdd);
 
         } while (changed);
 
-        reduced = [.. reduced.Where(obj => CalculateMargin(obj, reduced) >= minMargin)];
+        var reduced1 = reduced;
+        reduced = [.. reduced.Where(obj => CalculateMargin(obj, reduced1) >= minMargin)];
 
         return reduced;
     }
@@ -55,24 +55,19 @@ public static class Stolp
     private static double CalculateMargin((double[] Features, string Label) obj, List<(double[] Features, string Label)> data)
     {
         var same = data.Where(d => d.Label == obj.Label && !ReferenceEquals(d.Features, obj.Features))
-                       .Select(d => Distance(obj.Features, d.Features))
-                       .DefaultIfEmpty(double.MaxValue).Min();
+            .Select(d => Distance(obj.Features, d.Features))
+            .DefaultIfEmpty(double.MaxValue).Min();
 
         var diff = data.Where(d => d.Label != obj.Label)
-                       .Select(d => Distance(obj.Features, d.Features))
-                       .DefaultIfEmpty(double.MaxValue).Min();
+            .Select(d => Distance(obj.Features, d.Features))
+            .DefaultIfEmpty(double.MaxValue).Min();
 
         return diff - same;
     }
 
     private static double Distance(double[] a, double[] b)
     {
-        double sum = 0;
-        for (int i = 0; i < a.Length; i++)
-        {
-            double diff = a[i] - b[i];
-            sum += diff * diff;
-        }
+        var sum = a.Select((t, i) => t - b[i]).Sum(diff => diff * diff);
         return Math.Sqrt(sum);
     }
 }
