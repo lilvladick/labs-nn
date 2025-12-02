@@ -93,7 +93,7 @@ class Program
         }
     }
     
-    private static void Main()
+    private static void MainFake()
     {
         var allData = LoadDrugData("drugs_death.csv", out var drugToId);
         if (allData.Count == 0)
@@ -174,6 +174,11 @@ class Program
                 _ => throw new Exception("Неизвестная нормализация")
             }
         };
+    }
+
+    static void Main()
+    {
+        TestProgram.Run();
     }
 
 }
